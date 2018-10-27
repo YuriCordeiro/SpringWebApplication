@@ -81,10 +81,8 @@ pageEncoding="ISO-8859-1"%>
 							<ul class="navbar_menu">
 								<li><a href="#">home</a></li>
 								<li><a href="#">shop</a></li>
-								<li><a href="#">promotion</a></li>
-								<li><a href="#">pages</a></li>
-								<li><a href="#">blog</a></li>
-								<li><a href="contact.html">contact</a></li>
+								<li><a href="#">promocoes</a></li>
+								<li><a href="#">contato</a></li>
 							</ul>
 							<ul class="navbar_user">
 								<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
@@ -585,7 +583,7 @@ pageEncoding="ISO-8859-1"%>
 						<!--<ul class="footer_nav">-->
 							<!--<li><a href="#">Blog</a></li>-->
 							<!--<li><a href="#">FAQs</a></li>-->
-							<!--<li><a href="contact.html">Contact us</a></li>-->
+							<!--<li><a href="#">Contact us</a></li>-->
 						<!--</ul>-->
 					<!--</div>-->
 				<!--</div>-->
