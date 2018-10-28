@@ -12,6 +12,7 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href='<c:url value ="/resources/css/style.css" />' />
 
+
 <div class="header_container">
 
 	<!-- Header -->
@@ -19,7 +20,6 @@
 	<header class="header trans_300">
 
 		<!-- Top Navigation -->
-
 		<div class="top_nav">
 			<div class="container">
 				<div class="row">
@@ -50,7 +50,7 @@
 									</a>
 									<ul class="account_selection">
 										<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Fazer LogIn</a></li>
-										<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Cadastrar</a></li>
+										<li><a href='<c:url value = "/register"/>'><i class="fa fa-user-plus" aria-hidden="true"></i>Cadastrar</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -61,13 +61,12 @@
 		</div>
 
 		<!-- Main Navigation -->
-
 		<div class="main_nav_container">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-right">
 						<div class="logo_container">
-							<a href="#">Anny&<span>Anny</span></a>
+							<a href="/">Anny&<span>Anny</span></a>
 						</div>
 						<nav class="navbar">
 							<ul class="navbar_menu">

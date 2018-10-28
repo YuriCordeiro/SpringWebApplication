@@ -3,7 +3,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
     <head>
-
         <!-- META -->
         <%@ include file="../parts/meta.jsp" %>
 
@@ -11,26 +10,21 @@
 
         <!-- HEADER -->
         <%@ include file="../parts/header.jsp" %>
-
     </head>
 
     <body>
-
         <div class="super_container" width="100%">
 
 
             <!-- HOME PAGE CONTENT -->
-            <div id="teste" style="margin-top:10%; text-align:center;">
+            <div id="teste" class="container" style="margin-top: 10%">
                 <h2>Testando o conteúdo da página.</h2>
              </div>
 
             <!-- FOOTER -->
             <%@ include file="../parts/footer.jsp" %>
 
-
         </div>
-
-
     </body>
 
 </html>
