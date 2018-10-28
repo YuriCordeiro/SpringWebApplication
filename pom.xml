@@ -50,7 +50,7 @@
                 <configuration>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <webApp>
-                        <contextPath>/myapp</contextPath>
+                        <contextPath>/</contextPath>
                     </webApp>
                     <httpConnector>
                         <port>8081</port>
