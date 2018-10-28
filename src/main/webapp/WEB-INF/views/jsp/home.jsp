@@ -16,7 +16,7 @@
 
     <body>
 
-        <div class="super_container" width="100%" style="border:solid 1px black">
+        <div class="super_container" width="100%">
 
 
             <!-- HOME PAGE CONTENT -->
