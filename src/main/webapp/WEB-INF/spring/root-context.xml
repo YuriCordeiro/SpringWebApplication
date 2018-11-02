@@ -12,5 +12,18 @@
     <!-- DispatcherServlet Context: defines this servlet's request-processing
         infrastructure -->
 
+    <!-- Root Context: defines shared resources visible to all other web components -->
+    <bean id="localeChangeInterceptor"
+          class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+        <property name="paramName" value="language"/>
+    </bean>
+
+    <!--Properties to enable Autowired Annotation-->
+    <context:annotation-config/>
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
+    <!-- Services' Beans -->
+
+    <!-- DAO's Beans -->
 
 </beans:beans>
