@@ -16,7 +16,7 @@ public class HibernateUtil {
             if (null != ecomerceSessionFactory) {
                 return getEcomerceSessionFactory();
             } else {
-                return new Configuration().configure().buildSessionFactory();
+                return new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
             }
 
         } catch (Throwable ex) {

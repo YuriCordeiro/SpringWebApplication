@@ -7,6 +7,7 @@ import javax.persistence.*;
 @SequenceGenerator(name = "seqCity", sequenceName = "seqCity")
 public class CityDTO {
 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "seqCity")
     @Column(name = "CITY_ID")
     private Integer id;

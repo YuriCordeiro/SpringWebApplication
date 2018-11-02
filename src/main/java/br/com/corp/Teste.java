@@ -9,6 +9,8 @@ public class Teste {
         System.out.println("Testando aplicação, 1, 2..");
         Session session = HibernateUtil.getEcomerceSessionFactory().openSession();
         session.getNamedQuery("findAll").list();
+        session.close();
         System.out.println("Sucesso!");
+        System.exit(0);
     }
 }

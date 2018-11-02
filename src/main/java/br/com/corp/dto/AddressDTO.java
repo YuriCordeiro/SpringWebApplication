@@ -9,6 +9,7 @@ import java.util.Date;
 @SequenceGenerator(name = "seqAddress", sequenceName = "seqAddress")
 public class AddressDTO implements Serializable {
 
+    @Id
     @Column(name = "ADDRESS_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "seqAddress")
     private Integer id;
@@ -16,9 +17,8 @@ public class AddressDTO implements Serializable {
     @Column(name = "ADDRESS_DESCRIPTION", nullable = false)
     private String address;
 
-    @Column(nullable = false)
-    @OneToOne(fetch = FetchType.LAZY)
-    @MapsId
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "STATE_FK", nullable = false)
     private StateDTO state;
 
     @Column(name = "ZIP_POSTAL", length = 9, nullable = false)

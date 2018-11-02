@@ -9,6 +9,7 @@ import java.util.Set;
 @SequenceGenerator(name = "seqState", sequenceName = "seqState")
 public class StateDTO implements Serializable {
 
+    @Id
     @GeneratedValue(generator = "seqState", strategy = GenerationType.IDENTITY)
     @Column(name = "STATE_ID")
     private Integer id;
@@ -19,6 +20,11 @@ public class StateDTO implements Serializable {
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "CITY_ID")
     private Set<CityDTO> cities;
+
+    @OneToOne(fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            mappedBy = "state")
+    private AddressDTO address;
 
     /**
      * Empty Constructor

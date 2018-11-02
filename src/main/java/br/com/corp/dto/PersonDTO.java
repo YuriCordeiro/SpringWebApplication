@@ -8,11 +8,9 @@ import java.util.Set;
 @Entity
 @Table(name = "PERSON")
 @SequenceGenerator(name = "seqPerson", sequenceName = "seqPerson")
-@NamedQueries(
-        @NamedQuery(name = "findlAll", query = "FROM PersonDTO")
-)
 public class PersonDTO implements Serializable {
 
+    @Id
     @Column(name = "PERSON_ID")
     @GeneratedValue(generator = "seqPerson", strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -30,7 +28,7 @@ public class PersonDTO implements Serializable {
     private char sexGender;
 
     @OneToMany(fetch = FetchType.EAGER)
-    @JoinColumn(name = "PERSON_ID", nullable = false)
+    @JoinColumn(name = "PERSON_ID")
     private Set<AddressDTO> addresses;
 
     @Temporal(value = TemporalType.TIMESTAMP)
