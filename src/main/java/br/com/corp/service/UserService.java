@@ -1,7 +1,11 @@
 package br.com.corp.service;
 
-import org.springframework.stereotype.Service;
 
-@Service
-public class UserService {
+import br.com.corp.dto.UserDTO;
+
+public interface UserService {
+
+    UserDTO findUserByEmail(String email);
+
+    void updateUser(UserDTO user);
 }

@@ -18,9 +18,10 @@
             <!-- HEADER -->
             <%@ include file="../parts/header.jsp" %>
 
+
             <!-- HOME PAGE CONTENT -->
-            <div id="teste" class="container" style="margin-top: 10%">
-                <h2>Testando o conteúdo da página.</h2>
+            <div id="start-of-content" class="container" style="margin-top: 10%;">
+
              </div>
 
             <!-- FOOTER -->
