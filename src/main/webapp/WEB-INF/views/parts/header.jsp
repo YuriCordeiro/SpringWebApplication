@@ -25,9 +25,9 @@
 										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="language_selection">
-										<li><a href="#">Frances</a></li>
+										<li><a href="#">Francês</a></li>
 										<li><a href="#">Italiano</a></li>
-										<li><a href="#">Alemao</a></li>
+										<li><a href="#">Alemão</a></li>
 										<li><a href="#">Espanhol</a></li>
 									</ul>
 								</li>

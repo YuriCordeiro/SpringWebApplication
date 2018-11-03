@@ -292,7 +292,7 @@
 
             <div class="form-row">
                 <div class="col-lg-4 col-lg-offset-4">
-                    <button type="submit" class="btn btn-warning">Cadastrar!</button>
+                    <button type="submit" class="btn btn-warning" style="background-color: #ff0066; color: white; border-color: black;">Cadastrar!</button>
             </div>
             </div>
 

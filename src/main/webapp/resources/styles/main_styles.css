@@ -624,7 +624,8 @@ section
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background: #fe4c50;
+	//background: #fe4c50;
+	background: #ff0066;;
 	font-size: 12px;
 	color: #FFFFFF;
 }
@@ -812,7 +813,8 @@ section
 }
 .logo_container a span
 {
-	color: #fe4c50;
+	//color: #fe4c50;
+	color: #ff0066;;
 }
 
 /*********************************
