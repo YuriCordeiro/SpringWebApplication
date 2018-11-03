@@ -1,4 +1,8 @@
-package br.com.corp.service;
+package br.com.corp.service.impl;
 
-public interface AddressService {
+import br.com.corp.service.AddressService;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AddressServiceImpl implements AddressService {
 }

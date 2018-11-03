@@ -1,10 +1,19 @@
-package br.com.corp.service;
+package br.com.corp.service.impl;
 
+import br.com.corp.dao.PersonDAO;
 import br.com.corp.dto.PersonDTO;
+import br.com.corp.service.PersonService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface PersonService {
+@Service
+public class PersonServiceImpl implements PersonService {
 
-    public List<PersonDTO> findAll();
+    private PersonDAO personDAO;
+
+    public List<PersonDTO> findAll() {
+        return (List<PersonDTO>) personDAO.findAll();
+    }
+
 }

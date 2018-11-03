@@ -8,6 +8,11 @@ import java.util.Set;
 @Entity
 @Table(name = "PERSON")
 @SequenceGenerator(name = "seqPerson", sequenceName = "seqPerson")
+@NamedQueries(
+        @NamedQuery(
+                name = "findAll", query = "FROM PersonDTO"
+        )
+)
 public class PersonDTO implements Serializable {
 
     @Id
@@ -27,13 +32,20 @@ public class PersonDTO implements Serializable {
     @Column(name = "SEX_GENDER", length = 1, nullable = false)
     private char sexGender;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "PERSON_ID")
     private Set<AddressDTO> addresses;
 
     @Temporal(value = TemporalType.TIMESTAMP)
     @Column(name = "REGISTER_DATE")
     private Date registerDate;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false)
+    @MapsId(value = "USER_ID")
+    private UserDTO user;
+
+    @Column(name = "PHONE_NUMBER", length = 13)
+    private String phoneNumber;
 
 //    private List<CreditCardDTO> creditCards;
 
@@ -55,13 +67,16 @@ public class PersonDTO implements Serializable {
      * @param addresses    person addresses
      * @param registerDate registered date
      */
-    public PersonDTO(String firstName, String lastName, String nickName, char sexGender, Set<AddressDTO> addresses, Date registerDate) {
+    public PersonDTO(String firstName, String lastName, String nickName, char sexGender, Set<AddressDTO> addresses,
+                     Date registerDate, UserDTO user, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.nickName = nickName;
         this.sexGender = sexGender;
         this.addresses = addresses;
         this.registerDate = registerDate;
+        this.user = user;
+        this.phoneNumber = phoneNumber;
     }
 
 
@@ -121,12 +136,20 @@ public class PersonDTO implements Serializable {
         this.sexGender = sexGender;
     }
 
-    /**
-     * Should add a new Address to the user's addresses list
-     *
-     * @param newAddress a user new address
-     */
-    public void addNewAddress(AddressDTO newAddress) {
-        this.addresses.add(newAddress);
+    public UserDTO getUser() {
+        return user;
     }
+
+    public void setUser(UserDTO user) {
+        this.user = user;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
 }
