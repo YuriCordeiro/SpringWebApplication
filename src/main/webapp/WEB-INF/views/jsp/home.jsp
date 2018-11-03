@@ -8,13 +8,15 @@
 
         <title>Home</title>
 
-        <!-- HEADER -->
-        <%@ include file="../parts/header.jsp" %>
+        <!-- HEAD IMPORTS -->
+        <%@ include file="../parts/head.jsp" %>
     </head>
 
     <body>
         <div class="super_container" width="100%">
 
+            <!-- HEADER -->
+            <%@ include file="../parts/header.jsp" %>
 
             <!-- HOME PAGE CONTENT -->
             <div id="teste" class="container" style="margin-top: 10%">

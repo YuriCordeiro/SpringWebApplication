@@ -9,16 +9,15 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">root</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ecomerceDB</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.format_sql">true</property>
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hibernate.format_sql">false</property>
+        <property name="hbm2ddl.auto">update</property>
 
         <!-- Mapping Classes -->
         <mapping class="br.com.corp.dto.PersonDTO"/>
         <mapping class="br.com.corp.dto.AddressDTO"/>
-        <mapping class="br.com.corp.dto.StateDTO"/>
-        <mapping class="br.com.corp.dto.CityDTO"/>
+        <mapping class="br.com.corp.dto.UserDTO"/>
 
     </session-factory>
 </hibernate-configuration>

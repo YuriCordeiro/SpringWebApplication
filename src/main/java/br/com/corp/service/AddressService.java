@@ -1,8 +1,10 @@
-package br.com.corp.service.impl;
+package br.com.corp.service;
 
-import br.com.corp.service.AddressService;
+import br.com.corp.dao.AddressDAO;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AddressServiceImpl implements AddressService {
+public class AddressService {
+
+    private AddressDAO addressDAO;
 }

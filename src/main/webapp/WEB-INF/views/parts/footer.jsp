@@ -37,7 +37,7 @@
     </footer>
 </div>
 
-<script type="text/javascript" src='<c:url value ="/resources/js/jquery-3.2.1.min.js" />' />
+
 <script type="text/javascript" src='<c:url value ="/resources/styles/bootstrap4/popper.js" />' />
 <script type="text/javascript" src='<c:url value ="/resources/styles/bootstrap4/bootstrap.min.js" />' />
 <script type="text/javascript" src='<c:url value ="/resources/plugins/Isotope/isotope.pkgd.min.js" />' />

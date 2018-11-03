@@ -9,9 +9,7 @@ import java.util.Set;
 @Table(name = "PERSON")
 @SequenceGenerator(name = "seqPerson", sequenceName = "seqPerson")
 @NamedQueries(
-        @NamedQuery(
-                name = "findAll", query = "FROM PersonDTO"
-        )
+        @NamedQuery(name = "findAll", query = "FROM PersonDTO")
 )
 public class PersonDTO implements Serializable {
 
@@ -40,11 +38,10 @@ public class PersonDTO implements Serializable {
     @Column(name = "REGISTER_DATE")
     private Date registerDate;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false)
-    @MapsId(value = "USER_ID")
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false, mappedBy = "person")
     private UserDTO user;
 
-    @Column(name = "PHONE_NUMBER", length = 13)
+    @Column(name = "PHONE_NUMBER", length = 15)
     private String phoneNumber;
 
 //    private List<CreditCardDTO> creditCards;
